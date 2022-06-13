@@ -21,7 +21,6 @@
     "prettier": "prettier --write './**'",
     "start:dev": "webpack-dev-server --mode=development --port 9000 --env.isLocal=true",
     "start": "node server.js",
-    "prestart": "yarn run build",
     "test": "jest"
   },
   "husky": {
