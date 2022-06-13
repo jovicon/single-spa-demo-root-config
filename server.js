@@ -3,8 +3,8 @@ const path = require("path");
 const PORT = process.env.PORT || 5000;
 
 express()
-  .use(express.static(path.join(__dirname, "dist/single-spa-demo")))
+  .use(express.static(path.join(__dirname, "dist")))
   .get("*", (req, res) => {
-    res.sendFile(__dirname + "/dist/single-spa-demo/index.html");
+    res.sendFile("index.html", { root: "dist" });
   })
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
